@@ -40,7 +40,7 @@ const compressAndUploadImages = async (results, requestId) => {
       continue;
     }
 
-    const inputUrls = inputImageUrls.split(',').map(url => url.trim());
+    const inputUrls = inputImageUrls.split(/[\n,]+/).map(url => url.trim());
     const outputUrls = [];
 
     for (const inputImageUrl of inputUrls) {
@@ -61,7 +61,7 @@ const compressAndUploadImages = async (results, requestId) => {
 
   
         const outputImageUrl = `uploads/output_images/${fileName}`;
-        console.log("testing 1");
+        
         outputUrls.push(outputImageUrl);
       
       } catch (error) {
@@ -80,7 +80,7 @@ const compressAndUploadImages = async (results, requestId) => {
     await imageModel.insertImage({ ...outputRow, requestId, status: 'completed' });
   }
 
-  // **Write to CSV file in 'uploads/output_images'**
+
   const csvWriter = createObjectCsvWriter({
    
     path: outputCsvFilePath, 

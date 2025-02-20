@@ -20,10 +20,10 @@ const uploadCsv = async (req, res) => {
 
 const getStatus = async (req, res) => {
   const { requestId } = req.params;
-  console.log("testing 2");
+
   console.log(`Looking for requestId: "${requestId}"`);
   const status = await imageModel.getStatus(requestId);
-  console.log(status,"testing 1");
+  
   res.json(status);
 };
 
