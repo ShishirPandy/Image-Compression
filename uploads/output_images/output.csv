@@ -1,0 +1,10 @@
+S.No,Product Name,Input Image Urls,Compressed Image Urls
+Serial Number,Proudct Name,ImageUrls,
+1,Samsung Galaxy,"https://example.com/image1.jpg,https://example.com/image2.jpg",
+2,Iphone 13,"https://www.public-i
+mage-url1.jpg,
+https://www.public-i
+mage-url2.jpg,
+https://www.public-i
+mage-url3.jpg",
+3,moto,"https://example.com/image3.jpg,https://example.com/image4.jpg,https://example.com/image5.jpg",
